@@ -1,0 +1,124 @@
+.navbar {
+	
+	.navbar__wrapp {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.navbar__logo {
+			display: flex;
+			z-index: 99;
+		}
+		.navbar__list {
+			display: flex;
+			gap: 47px;
+			@include tablet() {
+				position: absolute;
+				top: 0;
+				left: 0;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+				height: 100vh;
+				padding: 100px;
+				background: linear-gradient(270deg, #000 -29.74%, rgba(0, 0, 0, 0) 89.47%);
+				transform: translate(-100%);
+				transition: all 0.3s ease;
+				z-index: 9;
+			}
+			@include mobile() {
+				position: absolute;
+				top: 0;
+				left: 0;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+				height: 100vh;
+				padding: 100px;
+				background: linear-gradient(270deg, #000 -29.74%, rgba(0, 0, 0, 0) 89.47%);
+				transform: translate(-100%);
+				transition: all 0.3s ease;
+				z-index: 9;
+			}
+			.navbar__list-item {
+				display: flex;
+
+				a {
+					color: #fff;
+					font-size: 18px;
+					font-weight: 400;
+					line-height: 136.2%;
+					transition: all 0.3s ease;
+					&:hover {
+						color: #86da44;
+					}
+				}
+			}
+
+			.navbar__list-item:first-child a {
+				color: #86da44;
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 136.2%;
+			}
+		}
+
+		.navbar__icons {
+			display: flex;
+			gap: 20px;
+
+			@include tablet() {
+				display: none;
+			}
+			@include mobile() {
+				display: none;
+			}
+		}
+
+		.navbar__item-icons {
+			display: none;
+
+			@include tablet() {
+				display: block;
+			}
+
+			@include mobile() {
+				display: block;
+			}
+		}
+		.bars div {
+			position: relative;
+			display: none;
+			width: 25px;
+			height: 3px;
+			margin: 5px;
+			background-color: #fff;
+			transition: all 0.3s ease;
+
+			@include tablet() {
+				display: block;
+				z-index: 999;
+			}
+			@include mobile() {
+				display: block;
+				z-index: 999;
+			}
+		}
+		.active {
+			transform: translateX(0);
+		}
+		.toggle {
+			transition: all 0.3s ease;
+			z-index: 1000;
+		}
+		.toggle .navbar__bars-1 {
+			transform: rotate(-45deg) translateY(12px);
+		}
+		.toggle .navbar__bars-2 {
+			opacity: 0;
+		}
+		.toggle .navbar__bars-3 {
+			transform: rotate(45deg) translateY(-11.5px);
+		}
+	}
+}

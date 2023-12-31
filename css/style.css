@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/Oswald-Regular.woff2") format("woff2"), url("Oswald-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/Oswald-ExtraLight.woff2") format("woff2"), url("Oswald-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/Oswald-Bold.woff2") format("woff2"), url("Oswald-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/Oswald-Light.woff2") format("woff2"), url("Oswald-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/Oswald-SemiBold.woff2") format("woff2"), url("Oswald-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/Oswald-Regular.woff2") format("woff2"), url("Oswald-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/Oswald-Medium.woff2") format("woff2"), url("Oswald-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background: #1e1e1e;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar .navbar__wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .navbar__wrapp .navbar__logo {
+  display: flex;
+  z-index: 99;
+}
+.navbar .navbar__wrapp .navbar__list {
+  display: flex;
+  gap: 47px;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar .navbar__wrapp .navbar__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    background: linear-gradient(270deg, #000 -29.74%, rgba(0, 0, 0, 0) 89.47%);
+    transform: translate(-100%);
+    transition: all 0.3s ease;
+    z-index: 9;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navbar .navbar__wrapp .navbar__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    background: linear-gradient(270deg, #000 -29.74%, rgba(0, 0, 0, 0) 89.47%);
+    transform: translate(-100%);
+    transition: all 0.3s ease;
+    z-index: 9;
+  }
+}
+.navbar .navbar__wrapp .navbar__list .navbar__list-item {
+  display: flex;
+}
+.navbar .navbar__wrapp .navbar__list .navbar__list-item a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 136.2%;
+  transition: all 0.3s ease;
+}
+.navbar .navbar__wrapp .navbar__list .navbar__list-item a:hover {
+  color: #86da44;
+}
+.navbar .navbar__wrapp .navbar__list .navbar__list-item:first-child a {
+  color: #86da44;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 136.2%;
+}
+.navbar .navbar__wrapp .navbar__icons {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar .navbar__wrapp .navbar__icons {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navbar .navbar__wrapp .navbar__icons {
+    display: none;
+  }
+}
+.navbar .navbar__wrapp .navbar__item-icons {
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar .navbar__wrapp .navbar__item-icons {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navbar .navbar__wrapp .navbar__item-icons {
+    display: block;
+  }
+}
+.navbar .navbar__wrapp .bars div {
+  position: relative;
+  display: none;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar .navbar__wrapp .bars div {
+    display: block;
+    z-index: 999;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navbar .navbar__wrapp .bars div {
+    display: block;
+    z-index: 999;
+  }
+}
+.navbar .navbar__wrapp .active {
+  transform: translateX(0);
+}
+.navbar .navbar__wrapp .toggle {
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.navbar .navbar__wrapp .toggle .navbar__bars-1 {
+  transform: rotate(-45deg) translateY(12px);
+}
+.navbar .navbar__wrapp .toggle .navbar__bars-2 {
+  opacity: 0;
+}
+.navbar .navbar__wrapp .toggle .navbar__bars-3 {
+  transform: rotate(45deg) translateY(-11.5px);
+}/*# sourceMappingURL=style.css.map */
